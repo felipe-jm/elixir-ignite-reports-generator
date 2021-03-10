@@ -125,7 +125,7 @@ iex(1)> :timer.tc(fn -> ReportsGenerator.build("report_complete.csv") end)
 
 It took 674379 microseconds, equivalent to 674,379 milliseconds
 
-Now readind tree files (_this files together form the 300 thousand lines csv_) in parallel using a task with tree processes:
+Now readind three files (_this files together form the 300 thousand lines csv_) in parallel using a task with three processes:
 
 ```elixir
 iex(2)> :timer.tc(fn -> ReportsGenerator.build_from_many(["report_1.csv", "report_2.csv", "report_3.csv"]) end)
